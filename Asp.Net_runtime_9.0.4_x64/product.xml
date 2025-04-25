@@ -12,7 +12,7 @@ Copy this structure into c:\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstr
     <!-- New link for HomeSite: "https://dotnet.microsoft.com/en-us/download" / "All .Net 9.0 versions" / "ASP.NET Core Runtime 9.0.4, Windows x64 installer" / "Direct link, Copy"
     You do not have to set the PublicKey but if you do then select the steps from https://foxlearn.com/articles/adding-custom-prerequisites-to-visual-studio-setup-project-468.html -->
     <PackageFile Name="aspnetcore-runtime-9.0.4-win-x64.exe"
-                 HomeSite=https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.4/aspnetcore-runtime-9.0.4-win-x64.exe"
+                 HomeSite="https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.4/aspnetcore-runtime-9.0.4-win-x64.exe"
                  PublicKey="0" />
      <!-- You can fin NetCoreCheck.exe at <VS install directory>\MSBuild\Microsoft\VisualStudio\BootstrapperPackages\net7coreruntime_x64  -->
     <PackageFile Name="NetCoreCheck.exe" />
@@ -24,7 +24,7 @@ Copy this structure into c:\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstr
     <ExternalCheck Property="NetCoreCheck" PackageFile="NetCoreCheck.exe" Arguments="Microsoft.AspNetCore.App 9.0.4"/>
   </InstallChecks>
 
-  <!-- Defines how to invoke the setup for the Asp.NET Runtime 7.0 -->
+  
   <Commands Reboot="Defer">
     <Command PackageFile="aspnetcore-runtime-9.0.4-win-x64.exe" Arguments=' /q '>
 
